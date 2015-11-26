@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/back1455">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Events"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#1d1f7b"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="22dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:id="@+id/add_table2"
+        android:layout_below="@+id/textView4">
+        <TableRow>
+            <TextView
+                android:text="Event Name:"
+                android:theme="@style/MyTextViewStyle"
+                android:padding="3dip"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/eventName"
+                android:theme="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:layout_column="2" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Date:"
+                android:theme="@style/MyTextViewStyle"
+                android:padding="3dip"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/eventDate"
+                android:theme="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:layout_column="2"
+                android:focusable="false"
+                android:hint="Pick a Date.." />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Time:"
+                android:theme="@style/MyTextViewStyle"
+                android:padding="3dip"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/eventTime"
+                android:theme="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:layout_column="2"
+                android:inputType="time"
+                android:hint="HH:MM" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Location:"
+                android:theme="@style/MyTextViewStyle"
+                android:padding="3dip"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/eventLocation"
+                android:theme="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:layout_column="2" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/btnAddEvent"
+                android:layout_below="@+id/add_table2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:theme="@style/MyButton"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:id="@+id/btnDeleteEvent"
+                android:layout_column="2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:theme="@style/MyButton"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:id="@+id/btnEditEvent"
+                android:layout_column="3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:theme="@style/MyButton"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView3"
+        android:layout_below="@+id/add_table2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:background="#fffbf3"
+        android:backgroundTint="#6168bdff"
+        android:clickable="true" />
+
+
+</RelativeLayout>

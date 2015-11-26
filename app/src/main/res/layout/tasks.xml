@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/back1455">
+
+    <TableLayout
+        android:id="@+id/add_table2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/textView3">
+        <TableRow>
+            <TextView
+                android:text="Task Name:"
+                android:theme="@style/MyTextViewStyle"
+                android:padding="3dip"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/taskName"
+                android:theme="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Location:"
+                android:theme="@style/MyTextViewStyle"
+                android:padding="3dip"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/taskLocation"
+                android:theme="@style/MyEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:layout_column="2" />
+        </TableRow>
+        <TableRow>>
+            <TextView
+                android:text="Status :"
+                android:theme="@style/MyTextViewStyle"
+                android:padding="3dip"
+                android:background="@android:color/transparent" />
+
+            <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/radiogroup2"
+                    android:layout_column="2">
+
+
+                    <RadioButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Completed"
+                        android:id="@+id/radioButton_com"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Uncompleted"
+                        android:id="@+id/radioButton_uncom"
+                        android:checked="true" />
+                </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/BtnAddTask"
+                android:text="Add"
+                android:theme="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyButton"
+                android:text="Update"
+                android:id="@+id/BtnUpdateTask"
+                android:layout_column="2" />
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/add_table2"
+        android:background="#fffbf3"
+        android:backgroundTint="#6168bdff"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="To-Do-Tasks"
+        android:id="@+id/textView3"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textColor="#1d1f7b"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

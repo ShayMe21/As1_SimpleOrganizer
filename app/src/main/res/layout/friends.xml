@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/back1455">
+
+
+    <TableLayout
+        android:focusableInTouchMode="true"
+        android:id="@+id/add_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView">
+        <TableRow>
+            <TextView
+                android:text="First Name:"
+                android:padding="3dip"
+                android:autoText="false"
+                android:theme="@style/MyTextViewStyle"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:capitalize="words"
+                android:elegantTextHeight="false"
+                android:singleLine="true"
+                android:typeface="monospace"
+                android:theme="@style/MyEditTextStyle" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Last Name:"
+                android:padding="3dip"
+                android:theme="@style/MyTextViewStyle"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:layout_column="2"
+                android:capitalize="words"
+                android:singleLine="true"
+                android:typeface="monospace"
+                android:theme="@style/MyEditTextStyle" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Gender :"
+                android:padding="3dip"
+                android:theme="@style/MyTextViewStyle"
+                android:background="@android:color/transparent" />
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/radiogroup"
+                android:layout_column="2">
+
+
+                <RadioButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:id="@+id/radioButton"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/radioButton2"
+                    android:checked="false" />
+            </RadioGroup>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Age:"
+                android:padding="3dip"
+                android:theme="@style/MyTextViewStyle"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:inputType="number"
+                android:layout_column="2"
+                android:singleLine="true"
+                android:typeface="monospace"
+                android:theme="@style/MyEditTextStyle" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Address:"
+                android:padding="3dip"
+                android:theme="@style/MyTextViewStyle"
+                android:background="@android:color/transparent" />
+            <EditText
+                android:id="@+id/addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip"
+                android:layout_column="2"
+                android:capitalize="words"
+                android:singleLine="true"
+                android:typeface="monospace"
+                android:theme="@style/MyEditTextStyle" />
+            <Button
+                android:id="@+id/BtnShowMap"
+                android:text="Show Map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:theme="@style/MyButton" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/BtnAddFriend"
+                android:text="Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:theme="@style/MyButton" />
+
+            <Button
+                android:id="@+id/BtnDelete"
+                android:text="Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:layout_column="2"
+                android:theme="@style/MyButton" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:id="@+id/BtnUpdate"
+                android:layout_column="3"
+                android:theme="@style/MyButton" />
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/add_table"
+        android:background="#fffbf3"
+        android:backgroundTint="#6168bdff"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Manage Friends"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textColor="#1d1f7b"
+        android:padding="5dp" />
+
+</RelativeLayout>

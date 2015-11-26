@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/layout"
+    android:background="@drawable/background05">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Simple Personal Organizer"
+        android:id="@+id/textHeader"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center_horizontal"
+        android:textSize="26dp"
+        android:typeface="serif"
+        android:padding="20dp"
+        android:textStyle="bold|italic" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homepageTable"
+        android:layout_below="@+id/textHeader"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/textFooter">
+        <TableRow>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnFriends"
+                android:src="@drawable/users6"
+                android:layout_below="@+id/textHeader"
+                android:layout_alignLeft="@+id/imgBtnTask"
+                android:layout_alignStart="@+id/imgBtnTask"
+                android:background="@android:color/transparent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:clickable="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Friends \nAdd, Edit and Delete your friends here."
+                android:id="@+id/textFriends"
+                android:layout_below="@+id/textHeader"
+                android:layout_alignLeft="@+id/textTasks"
+                android:layout_alignStart="@+id/textTasks"
+                android:theme="@style/MyTextViewMainStyle"
+                android:layout_marginTop="15dp" />
+
+        </TableRow>
+        <TableRow>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnTask"
+                android:src="@drawable/contract11"
+                android:layout_below="@+id/imgBtnFriends"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:clickable="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="To-do-Tasks \nView and Edit your tasks here."
+                android:id="@+id/textTasks"
+                android:layout_below="@+id/imgBtnFriends"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignStart="@+id/textView2"
+                android:theme="@style/MyTextViewMainStyle"
+                android:layout_marginTop="15dp" />
+        </TableRow>
+        <TableRow>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnEvents"
+                android:src="@drawable/calendar53"
+                android:layout_below="@+id/imgBtnTask"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:clickable="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Events \nAdd, Edit and Delete events here."
+                android:id="@+id/textView2"
+                android:layout_below="@+id/imgBtnTask"
+                android:layout_toRightOf="@+id/imgBtnTask"
+                android:layout_toEndOf="@+id/imgBtnTask"
+                android:theme="@style/MyTextViewMainStyle"
+                android:layout_marginTop="15dp" />
+        </TableRow>
+        <TableRow>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnGallery"
+                android:src="@drawable/picture31"
+                android:layout_below="@+id/imgBtnEvents"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:clickable="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Gallery \nView your pictures here."
+                android:id="@+id/textGallery"
+                android:layout_below="@+id/imgBtnEvents"
+                android:layout_alignLeft="@+id/textFriends"
+                android:layout_alignStart="@+id/textFriends"
+                android:theme="@style/MyTextViewMainStyle"
+                android:layout_marginTop="15dp" />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Designed by Freepik."
+        android:id="@+id/textFooter"
+        android:gravity="center"
+        android:textSize="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
